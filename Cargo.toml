@@ -3,8 +3,13 @@ name = "impostorbot"
 version = "0.1.0"
 edition = "2024"
 
-[dependencies]
-teloxide = { version = "0.17.0", features = ["macros"] }
-log = "0.4"
-pretty_env_logger = "0.5"
-tokio = { version =  "1.8", features = ["rt-multi-thread", "macros"] }
+[workspace]
+# Todos los miembros (crates) de nuestro proyecto
+members = [
+    "game_core",
+    "web_api",
+    "telegram_bot",
+]
+
+# Opcional: Resolver las dependencias a nivel de workspace
+resolver = "2"
